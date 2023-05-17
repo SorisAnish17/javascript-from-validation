@@ -55,7 +55,7 @@ submit.addEventListener("click", (e) => {
     paraTwo.textContent = detailsValue;
     paraTwo.style.color = "green";
   } else {
-    paraTwo.textContent = "Error";
+    paraTwo.textContent = "You have to select a plan";
     paraTwo.style.color = "red";
   }
 });
