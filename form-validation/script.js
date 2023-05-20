@@ -9,6 +9,21 @@ let radio = document.querySelector(".radio");
 let submit = document.querySelector("#submit");
 let formArea = document.querySelector(".form-area");
 //submit action
+//valid email
+let message = document.querySelector("#email-small");
+let result;
+email.addEventListener("change", (e) => {
+  let value = e.target.value;
+  result = value.includes("@");
+  if (result) {
+    console.log(result);
+    message.textContent = "Valid";
+    message.style.color = "green";
+  } else {
+    message.textContent = "Invalid";
+    message.style.color = "red";
+  }
+});
 submit.addEventListener("click", (e) => {
   e.preventDefault();
   for (let childrens of form) {
